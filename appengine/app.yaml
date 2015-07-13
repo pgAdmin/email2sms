@@ -7,6 +7,8 @@ threadsafe: no
 handlers:
 - url: /
   script: store.py
+- url: /store
+  script: store_self.py
 
 libraries:
 - name: webapp2
