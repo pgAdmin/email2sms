@@ -2,9 +2,6 @@ import cgi
 from smslib import Way2sms
 from google.appengine.ext import ndb
 
-way2_username = '9999999999'
-way2_password = 'password'
-
 class Emails(ndb.Model):
 	phone = ndb.StringProperty()
 	content = ndb.StringProperty()
@@ -24,7 +21,7 @@ email = Emails(parent=ndb.Key('Emails', '*notitle'), phone=num[0], content=subje
 email.put()
 
 #Send SMS
-newSMS = Way2sms('http://site24.way2sms.com', way2_username, way2_password)
+newSMS = Way2sms('http://site24.way2sms.com', '9665215267', 'asdfgh')
 newSMS.login()
 newSMS.getToken()
 newSMS.sendSMS(num[0], subject+','+sender)

@@ -14,7 +14,7 @@ rec = form.getvalue('recipient')
 sender = form.getvalue('From')
 subject = form.getvalue('subject')
 data = form.getvalue('stripped-text')
-credentials = rec.split("@").split("_")
+credentials = rec.split("@")[0].split("_")
 
 way2_username = credentials[0]
 way2_password = credentials[1]

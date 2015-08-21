@@ -6,8 +6,12 @@ threadsafe: no
 
 handlers:
 - url: /
-  script: store.py
+  script: home.py
+
 - url: /store
+  script: store.py
+
+- url: /storeself
   script: store_self.py
 
 libraries:
